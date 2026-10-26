@@ -1,6 +1,8 @@
 import readline from "node:readline";
 import {stdin as input, stdout as output} from "node:process";
 import { printTicketResult } from "./ticket-price.js";
+import { deliveryPrice } from "./delivery-price.js";
+import { printSteps } from "./steps.js";
 
 const rl = readline.createInterface({
     input,
@@ -25,15 +27,15 @@ const checkAnswerMenu = (answer) => {
             return;
         }
         case "2": {
-            console.log(`Вы ввели: ${answer}`);
-            break;
+            deliveryPrice(rl);
+            return;
         }
         case "3": {
-            console.log(`Вы ввели: ${answer}`);
-            break;
+            printSteps(rl);
+            return;
         }
         default: {
-            console.log(`Такого пункта нет: ${answer}`);
+            console.log(`Такой задачи нет: ${answer}`);
         }
     }
 
