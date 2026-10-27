@@ -14,7 +14,7 @@ const getDeliveryPrice = (distance, total) => {
     return 200 + 25 * (distance - 10);
 };
 
-export const calculateDelivery = (distance, total) => {
+const calculateDelivery = (distance, total) => {
     const price = getDeliveryPrice(distance, total);
 
     console.log(

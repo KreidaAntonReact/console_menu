@@ -1,4 +1,4 @@
-export const calculateSteps = (height) => {
+const calculateSteps = (height) => {
     let built = 0;
 
     for (let step = 1; step <= height; step += 1) {

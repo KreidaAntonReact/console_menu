@@ -36,7 +36,7 @@ const showTicketResult = (category, budget, price, tickets) => {
     console.log(message);
 };
 
-export const calculateTicketResult = (category, budget) => {
+const calculateTicketResult = (category, budget) => {
     if(isNaN(budget)) {
         console.log("некорректный бюджет");
         return;
